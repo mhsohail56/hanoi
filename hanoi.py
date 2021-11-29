@@ -93,18 +93,20 @@ class Game:
 
 
 def solution(n: int) -> None:
+    if not os.path.exists("temp"):
+        os.mkdir("temp")
     if not os.path.exists("temp/cropped"):
         os.mkdir("temp/cropped")
     if not os.path.exists("temp/uncropped"):
         os.mkdir("temp/uncropped")
+    if not os.path.exists("out"):
+        os.mkdir("out")
 
     game = Game(n)
     game.print_towers()
-
     game.solve(game.n, game.towers[0], game.towers[1], game.towers[2])
 
-    shutil.rmtree("temp/uncropped")
-    shutil.rmtree("temp/cropped")
+    shutil.rmtree("temp")
 
 
 if __name__ == "__main__":
