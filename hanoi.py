@@ -52,7 +52,7 @@ class Game:
             for filename in sorted(filenames, key=lambda s: int(s[13:-4])):
                 images.append(imageio.imread(filename))
 
-            imageio.mimsave('out/solution.gif', images, fps=2)
+            imageio.mimsave(f'out/solution_{n}.gif', images, fps=2)
 
     def print_towers(self) -> None:
 
@@ -112,4 +112,4 @@ def solution(n: int) -> None:
 if __name__ == "__main__":
     n = int(input("Select you number of disks (note, this program only works feasibly for up to 7 disks): "))
     solution(n)
-    print("Check out/solution.gif for your solution!")
+    print(f"Check out/solution_{n}.gif for your solution!")
