@@ -110,6 +110,6 @@ def solution(n: int) -> None:
 
 
 if __name__ == "__main__":
-    n = int(input("Select you number of disks (note, this program only works feasibly for up to 7 disks): "))
+    n = int(input("Select you number of disks (note, this program only works feasibly for 2 to 7 disks): "))
     solution(n)
     print(f"Check out/solution_{n}.gif for your solution!")
